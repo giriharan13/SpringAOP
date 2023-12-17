@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<beans xmlns="http://www.springframework.org/schema/beans"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"   
+    xmlns:aop="http://www.springframework.org/schema/aop"  
+    xsi:schemaLocation="http://www.springframework.org/schema/beans  
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd   
+    http://www.springframework.org/schema/aop   
+    http://www.springframework.org/schema/aop/spring-aop-3.0.xsd ">
+    
+<aop:aspectj-autoproxy></aop:aspectj-autoproxy>
+
+    <bean name="triangle"   class="com.giriharan.Project1.model.Triangle" >
+    <property name="name" value="t1" />
+    </bean>
+    
+    <bean name="circle"   class="com.giriharan.Project1.model.Circle" >
+    <property name="name" value="c1" />
+    </bean>
+
+    <bean name="shapeService"   class="com.giriharan.Project1.service.ShapeService" autowire="byName" />
+    <bean name="testingAspect"  class="com.giriharan.Project1.aspect.TestingAspect" />
+       <bean name="testingAspect2"  class="com.giriharan.Project1.aspect.TestingAspect2" />
+        <bean name="testingAspect3"  class="com.giriharan.Project1.aspect.TestingAspect3" /> 
+        </beans>
+  
